@@ -1,13 +1,26 @@
 ﻿@page "/studio"
-
 <h3>Studio</h3>
+@rendermode interactiveServer
 
-<div>
 
-	<img src="images/m6 f13.jpg" class="cars" alt="Alternate Text" />
-	<button class="pp">это сайт</button>
-</div>
+
+<p> введите возраст:</p>
+<input @bind="age" type="number" />
+<p>@message</p>
+
 
 @code {
+	private int age = 20; 
 
+	private string message{
+
+		get{
+			if (age >= 18)
+				return "вы взрослый";
+
+		else 
+		return "вы ребенок";
+		}
+
+	}
 }
