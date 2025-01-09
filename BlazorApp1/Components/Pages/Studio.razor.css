@@ -1,0 +1,10 @@
+﻿body {
+}
+
+.cars{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+}
