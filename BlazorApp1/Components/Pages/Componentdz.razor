@@ -1,0 +1,69 @@
+﻿@page "/copmdz"
+@rendermode InteractiveServer
+<h3>Componentdz</h3>
+
+<p>@chast.Dohod</p>
+<p>@chast.Rabotniki</p>
+<input type="submit"/>
+
+<button @onclick="VivodPrible">ntrcn</button>
+
+@code {
+	public class Chast{
+		public double  Dohod { get; set; }
+		public string? Biznes { get; set; }
+		public int Rabotniki { get; set; }
+
+		public void Raznovidnost(){
+			Console.WriteLine($"{Biznes} индивидуальный предпринематель - фирма  ");
+		}
+		public void Prible(){
+			Console.WriteLine($"{Dohod} - составил доход фирмы {Biznes}");
+		}
+	}
+	private Chast chast = new Chast
+		{
+			Dohod = 200000,
+			Biznes = "fghjk",
+			Rabotniki = 100
+		};
+
+	private void VivodPrible(){
+		chast.Prible();
+	}
+
+	private Chast chast2 = new Chast
+		{
+			Dohod = 30000,
+			Biznes = "fffff",
+			Rabotniki = 6
+		};
+
+	private void VivodPrible2() {
+		chast2.Prible();
+	}
+
+	public class List
+	{
+		public double Name { get; set; }
+		public string? Nomer { get; set; }
+		public int Gmail { get; set; }
+
+		public void dannie()
+		{
+			Console.WriteLine($"{Name} Ваше имя ***  ");
+		}
+
+		public void Nomera()
+		{
+			Console.WriteLine($"{Nomer} +7***** ");
+		}
+
+		public void Pochta()
+		{
+			Console.WriteLine($"{Gmail} ******gmail.com ");
+		}
+	}
+}
+
+

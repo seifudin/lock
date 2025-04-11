@@ -1,0 +1,28 @@
+﻿@page "/dz-7"
+@rendermode InteractiveServer
+<h3>dz_7</h3>
+
+<input type="number" @bind="one"/>
+
+<input type="number" @bind="two"/>
+
+<button @onclick="Delete">делить</button>
+
+<button @onclick="Umnozhit">умнож</button>
+
+<p>@result</p>
+
+@code {
+	private double one = 0;
+	private double two = 0;
+	private double result = 0;
+
+	private void Delete() {
+		result = one / two;
+	}
+
+	private void Umnozhit () {
+		result = one * two;
+	} 
+
+}

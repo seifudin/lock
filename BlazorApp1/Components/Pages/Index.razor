@@ -1,11 +1,39 @@
 ﻿@page "/index"
-
-<div class="div-h3">
-<h3 class="h3">document</h3>
-</div>
-
-<p>hello-world</p>
+ @rendermode InteractiveServer
+<h1></h1>
+<p>@student1.Name</p>
+<button @onclick="Students">AAA</button>
 
 @code {
+	public class Student{
+		public string? Name { get; set; }
+		public int Otchenki { get; set; }
+		public double Nomer { get; set; }
+		public string? Pochta { get; set; }
+		public int Age { get; set; }
+
+		public void Names() {
+			Console.WriteLine ( $"{Name} Алексей");
+			Console.WriteLine($"{Otchenki}");
+		}
+
+		
+
+
+	};
+
+	private Student student1 = new Student
+		{
+			Name = "Марк",
+			Otchenki = 5,
+			Nomer = 789798977,
+			Pochta = "hchch",
+			Age = 21
+		};
+
+	private void Students()
+	{
+		student1.Names();
+	}
 
 }

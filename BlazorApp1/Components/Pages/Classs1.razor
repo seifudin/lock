@@ -1,0 +1,28 @@
+﻿@page "/class1"
+@rendermode InteractiveServer
+<h3>Classs1</h3>
+
+<p>	@rabotnik.Rabota </p>
+<p> @rabotnik.Smena </p>
+
+
+@code {
+	public class Rabotnik {
+		public int Smena { get; set; }
+		public string? Rabota { get; set; }
+
+		public void Uchet (){
+			Console.WriteLine($"{Rabota} 8:00 - 18:00 выполнить задачу ");
+		}
+	}
+
+	private Rabotnik rabotnik = new Rabotnik
+	{
+		Smena = 2,
+		Rabota = "разнорабочий"
+	};
+
+	private void Table (){
+		rabotnik.Uchet ();
+	}
+}

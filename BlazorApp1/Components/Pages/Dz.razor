@@ -1,0 +1,23 @@
+﻿@page "/dz-5"
+@rendermode InteractiveServer
+<h3>Dz</h3>
+
+<input @bind="light" />
+<button @onclick="speed">узнать</button>
+<p>@fr</p>
+
+@code {
+	private string light = "";
+
+	private string fr = "";
+
+	private void speed (){
+		if (light == "молоко")
+
+			fr = "Есть в холодильнике";
+
+		else
+			fr = "нет в холодельнике";
+	}
+
+}

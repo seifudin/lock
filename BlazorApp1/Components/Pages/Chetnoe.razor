@@ -1,0 +1,27 @@
+﻿@page "/chet"
+@rendermode InteractiveServer
+<h3>chetnoe</h3>
+
+<input tupe="number" @bind="number1"/>
+
+<input type="number" @bind="number2"/>
+
+<button @onclick="fin">jjjj</button>
+
+<p>@itog</p>
+@code {
+	private double number1 = 0;
+	private double number2 = 0;
+	private double itog = 0;
+
+	private void fin(){
+		if (number1 >= number2)
+
+			itog = number1 - number2;
+
+		else
+
+			itog = number1 + number2;
+	}
+
+}

@@ -1,0 +1,21 @@
+﻿@page "/runet"
+@rendermode InteractiveServer
+<h3>runet</h3>
+
+<input @bind="auto"/>
+<button @onclick="Update">узнать</button>
+<p>@pack</p>
+
+@code {
+	private string auto = "";
+
+	private string pack = "";
+
+	private void Update(){
+		if (auto == "BMW")
+			pack = "есть на парковке";
+		else
+			pack = "нет на парковке";
+	}
+
+}

@@ -1,0 +1,26 @@
+﻿@page "/component-dz"
+@rendermode InteractiveServer
+<h3>Component_dz</h3>
+
+<input @bind="print" />
+
+<button @onclick="lll">узнать</button>
+
+<p>@sch</p>
+
+
+@code {
+	private string print = "";
+
+	private string sch = "";
+
+	private void lll()
+	{
+		if (print == "ученик 11г класса")
+
+			sch = "Есть в школе";
+
+		else
+			sch = "нет в школе";
+	}
+}

@@ -1,0 +1,30 @@
+﻿@page "/calkulaytor"
+@rendermode InteractiveServer
+<h3>calkulaytor</h3>
+
+<h1>калькулятор</h1>
+
+<p>узнай сумму которая тебе нужна!</p>
+
+<input type="number" @bind="number1"/>
+
+<p>Введите число:</p>
+
+<input type="number" @bind="number2"/>
+
+<button @onclick="Vichet">узнать итог</button>
+
+<p>итог: @result</p>
+
+@code {
+
+	private double number1 = 0;
+
+	private double number2 = 0;
+
+	private double result = 0;
+
+	private void Vichet() {
+	result = number1 - number2;
+	}
+}

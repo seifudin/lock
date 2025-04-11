@@ -1,0 +1,26 @@
+﻿@page "/gggg"
+@rendermode InteractiveServer
+<h3>GGGG</h3>
+
+<input type="number" @bind="one"/>
+
+<button @onclick="Chislit"> итог </button>
+
+<p>@message</p>
+
+@code {
+	private double one = 0;
+	private string message = "";
+
+	private void Chislit() {
+		if (one % 2 == 0)
+
+			message = "четное";
+
+		else
+
+			message = "нечетное";
+
+	}
+
+}

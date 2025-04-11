@@ -1,0 +1,29 @@
+﻿@page "/dz2"
+<h3>dz2</h3>
+
+<ul>
+	@foreach (var one in list)
+	{
+
+		<li>@one</li>
+	}
+
+</ul>
+
+<ul>
+	@foreach (var onw2 in plist)
+	{
+
+		<li>@onw2</li>
+
+	}
+</ul>
+
+@code {
+
+	private string[] list = { "audi", "bmw", "mersedes", "porshe" };
+	private double[] plist = { 2000, 9000, 7700, 8800 };
+
+}
+
+

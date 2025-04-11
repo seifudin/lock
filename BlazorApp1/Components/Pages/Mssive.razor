@@ -1,0 +1,18 @@
+﻿@page "/massive"
+@rendermode InteractiveServer
+<h3>massive</h3>
+
+	@foreach (var number in numberList){
+		<p>@number</p>
+		
+	}
+
+<button @onclick="AddNumber">+1 </button>
+
+@code {
+	private List<int> numberList = new List<int> { 1, 2, 3, 4, 5 };
+
+	private void AddNumber (){
+		numberList.Add(numberList.Count +1); 
+	}
+}

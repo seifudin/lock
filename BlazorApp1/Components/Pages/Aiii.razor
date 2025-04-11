@@ -1,8 +1,28 @@
-﻿<h3>Component</h3>
-@page "/aiii"
+﻿@page "/aiii"
+@rendermode InteractiveServer
+<h3>Component</h3>
 
-<img src="m6 f13.jpg" alt="Alternate Text" />
+<h1>Калькулятор</h1>
+
+<p>введите число:</p>
+<input @bind="number1" type="number" />
+
+<p>введите число:</p>
+<input @bind="number2" type="number" />
+
+<button @onclick="Itog">сложение</button>
+
+<p>итог:@result</p>
+
+
 
 @code {
+	private double number1 = 0;
+	private double number2 = 0;
+	private double result = 0;
 
+	private void Itog (){
+		result = number1 + number2;
+	}
+		
 }

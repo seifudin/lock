@@ -1,0 +1,23 @@
+﻿@page "/compo-3"
+<h3>Component</h3>
+
+
+<ul>
+	@foreach(var lite in plan){
+		<li>@lite</li>
+	}
+	
+</ul>
+
+<ul>
+	@foreach(var number in plannumber){
+		<li>@number</li>
+	}
+</ul>
+
+@code {
+	private string[] plan = {"Алексей", "Андрей", "Михаил", "Владимир"  };
+
+	private double[] plannumber = { 300 ,400 ,800 ,900 };
+
+}

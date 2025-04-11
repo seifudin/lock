@@ -1,26 +1,22 @@
 ﻿@page "/studio"
-<h3>Studio</h3>
 @rendermode InteractiveServer
-
+<h3>Studio</h3>
 
 
 <p> введите возраст:</p>
 <input @bind="age" type="number" />
+<button @onclick="Update">узнать</button>
 <p>@message</p>
 
-
 @code {
-	private int age = 20; 
+    private int age = 0;
+    private string message = "";
 
-	private string message{
-
-		get{
-			if (age >= 18)
-				return "вы взрослый";
-
-		else 
-		return "вы ребенок";
-		}
-
-	}
+    private void Update ()
+    {
+        if (age >= 18)
+            message = "вы взрослый";
+        else
+            message = "вы ребенок";
+    }
 }

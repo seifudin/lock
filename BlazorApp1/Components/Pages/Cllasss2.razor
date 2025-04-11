@@ -1,0 +1,19 @@
+﻿@page "/class2"
+<h3>Cllasss2</h3>
+
+@code {
+	public class Chelovek {
+		public string? Eda { get; set; }
+		public int Age { get; set; }
+		public string? Son { get; set; }
+		public double NomerTel { get; set; }
+
+		public void Ludi() {
+			Console.WriteLine( $"{Eda} потребность 2-3 раза в сутки");
+			Console.WriteLine( $"{Age} 0-140 лет");
+			Console.WriteLine( $"{NomerTel} +7 *** *** **");
+			Console.WriteLine( $"{Son} вечера 21:00 - 6:30 утра");
+		}
+	}
+
+}
